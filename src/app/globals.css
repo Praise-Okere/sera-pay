@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-neutral text-neutral-dark;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-semibold py-2 px-4 rounded-lg shadow transition-all duration-150;
+  }
+  
+  .glass-card {
+    @apply bg-white bg-opacity-80 backdrop-blur-md rounded-lg shadow-glass border border-white border-opacity-20 p-6 transition-all duration-150;
+  }
+  
+  .status-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .status-badge.pending {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+  
+  .status-badge.confirmed {
+    @apply bg-accent-success bg-opacity-20 text-accent-success;
+  }
+  
+  .status-badge.failed {
+    @apply bg-accent-warning bg-opacity-20 text-accent-warning;
+  }
+}
